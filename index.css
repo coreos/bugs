@@ -1,0 +1,10 @@
+.category {
+	background: #EEEEEE;
+	padding: 1em;
+	margin: 1em;
+	border-radius: 1em;
+}
+
+.category h3 {
+	margin: 0;
+}
