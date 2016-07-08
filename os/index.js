@@ -1,11 +1,11 @@
-function populateList(labels, div) {
+function populateList(query, div) {
 	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open("GET", "https://api.github.com/repos/coreos/bugs/issues?sort=updated&direction=asc&labels=" + labels);
+	xmlHttp.open("GET", "https://api.github.com/search/issues?sort=updated&order=asc&q=repo:coreos/bugs+type:issue+state:open+" + query);
 	xmlHttp.addEventListener("load", function() {
 		var issues = JSON.parse(xmlHttp.responseText);
 		var list = div.getElementsByTagName("ol")[0];
 
-		issues.forEach(function(issue) {
+		issues.items.forEach(function(issue) {
 			var a = document.createElement('a');
 			a.appendChild(document.createTextNode(issue.title));
 			a.title = issue.title
@@ -21,9 +21,11 @@ function populateList(labels, div) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-	populateList("team/os,priority/P0", document.getElementById("os-p0"));
-	populateList("team/os,priority/P1", document.getElementById("os-p1"));
-	populateList("team/os,priority/P2", document.getElementById("os-p2"));
-	populateList("team/os,priority/Pmaybe", document.getElementById("os-pmaybe"));
-	populateList("team/os,kind/question", document.getElementById("os-questions"));
+	populateList("label:team/os+label:priority/P0", document.getElementById("os-p0"));
+	populateList("label:team/os+label:priority/P1", document.getElementById("os-p1"));
+	populateList("label:team/os+label:priority/P2", document.getElementById("os-p2"));
+	populateList("label:team/os+label:priority/Pmaybe", document.getElementById("os-pmaybe"));
+	populateList("label:team/os+label:kind/question", document.getElementById("os-questions"));
+	populateList("no:label", document.getElementById("os-untriaged"));
+	populateList("label:team/os+-label:priority/P0+-label:priority/P1+-label:priority/P2+-label:priority/Pmaybe+-label:kind/question", document.getElementById("os-unprioritized"));
 });
