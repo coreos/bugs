@@ -1,19 +1,21 @@
 # Issue Report #
 
+<!-- Fill in either the 'Bug' or 'Feature Request' section -->
+
 ## Bug ##
 
-### CoreOS Version ###
+### Container Linux Version ###
 
 ```
 $ cat /etc/os-release
-NAME=CoreOS
+NAME="Container Linux by CoreOS"
 ...
 BUG_REPORT_URL="https://github.com/coreos/bugs/issues"
 ```
 
 ### Environment ###
 
-What hardware/cloud provider/hypervisor is being used to run CoreOS?
+What hardware/cloud provider/hypervisor is being used to run Container Linux?
 
 ### Expected Behavior ###
 
@@ -30,7 +32,7 @@ What hardware/cloud provider/hypervisor is being used to run CoreOS?
 
 ### Environment ###
 
-What hardware/cloud provider/hypervisor is being used to run CoreOS?
+What hardware/cloud provider/hypervisor is being used to run Container Linux?
 
 ### Desired Feature ###
 
