@@ -10,7 +10,7 @@
 $ cat /etc/os-release
 NAME="Container Linux by CoreOS"
 ...
-BUG_REPORT_URL="https://github.com/coreos/bugs/issues"
+BUG_REPORT_URL="https://issues.coreos.com"
 ```
 
 ### Environment ###
