@@ -1,7 +1,8 @@
 # CoreOS Container Linux Bugs
 
-Container Linux has a large number of components.
-File issues here if you don't know the source of the problem.
+CoreOS Container Linux has
+[reached its end of life](https://coreos.com/os/eol/) and is no longer
+maintained or updated.  This issue tracker is no longer active.
 
 ## Fedora CoreOS
 
